@@ -1,0 +1,8 @@
+{
+  "name": "FormatPhoneNumber",
+  "version": "0.0.1",
+  "main": [
+    "dist/index.html",
+    "dist/app.js"
+  ]
+}

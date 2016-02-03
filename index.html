@@ -1,0 +1,42 @@
+<html ng-app="angular_lib">
+<head>
+    <title>Format phone numbers</title>
+    <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css" />
+
+</head>
+<body ng-controller="Format_PhoneNumber as p_no">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <br/>
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="phone_number">Enter phone number</label>
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <select id="singleSelect" ng-model="p_no.country_code">
+                                    <option value="option-1">US(+1)</option>
+                                    <option value="option-2">INDIA(+91)</option>
+                                    <option value="option-3">GERMANY(+49)</option>
+                                    <option value="option-4">FRANCE(+33)</option>
+                                    <option value="option-5">GREECE(+30)</option>
+                                    <option value="option-6">CHINA(+86)</option>
+                                    <option value="option-7">CHILE(+56)</option>
+                                    <option value="option-8">BRAZIL(+55)</option>
+                                    <option value="option-9">ITALY(+39)</option>
+                                    <option value="option-10">ARGENTINA(+54)</option>
+                                </select>
+                            </div>
+                            <input type="text" class="form-control" id="phone_number" ng-model="p_no.phone_number" maxlength="10">
+                        </div>
+                    </div>
+                </form>
+                <p>Formatted result: &nbsp;{{p_no.phone_number | format: p_no.country_code}}</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.angularjs.org/1.4.8/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
